@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: hospital-management-api
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn config.wsgi:application"
