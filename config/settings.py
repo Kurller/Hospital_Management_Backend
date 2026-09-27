@@ -40,16 +40,23 @@ CSRF_COOKIE_SECURE = not DEBUG
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'accounts',
-    'corsheaders',
-]
+    # Django apps
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
 
+    # Third-party apps
+    "rest_framework",
+    "corsheaders",
+    "drf_yasg",
+
+    # Your apps
+    "accounts",
+    "appointments",
+]
 CORS_ALLOWED_ORIGINS = os.getenv(
     "CORS_ALLOWED_ORIGINS",
     ""
